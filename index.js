@@ -4,10 +4,10 @@ const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
 
-// const coreOption = {
-//     origin: "*",
-//     Credential: true,
-// };
+const coreOption = {
+    origin: "*",
+    Credential: true,
+};
 
 const app = express();
 initializeDB();
