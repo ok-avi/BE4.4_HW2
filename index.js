@@ -6,13 +6,13 @@ const cors = require("cors");
 
 const coreOption = {
     origin: "*",
-    Credential: true,
+    credentials: true,
 };
 
 const app = express();
 initializeDB();
 app.use(express.json());
-app.use(cors());
+app.use(cors(coreOption));
 
 async function getAllHotels() {
     try {
