@@ -4,16 +4,17 @@ const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
 
-const corsOptions = {
-  origin: "*",
-  credentials: true,
-  optionSuccessStatus: 200,
-};
+// const corsOptions = {
+//   origin: "*",
+//   credentials: true,
+//   optionSuccessStatus: 200,
+// };
 
 const app = express();
 initializeDB();
 app.use(express.json());
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors())
 
 async function getAllHotels() {
     try {
